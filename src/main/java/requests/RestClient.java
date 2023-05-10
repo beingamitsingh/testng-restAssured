@@ -51,4 +51,14 @@ public abstract class RestClient {
                 .then().log().all()
                 .extract().response();
     }
+
+    public Response createDeleteRequest(String apiPath)   {
+        return RestAssured.given()
+                .header("Content-Type", "application/json")
+                .header("Accept", "application/json")
+                .header("Authorization", "Bearer " + authenticateClient.getToken())
+                .when().delete(Config.getProperty("rest_url") + apiPath)
+                .then().log().all()
+                .extract().response();
+    }
 }
