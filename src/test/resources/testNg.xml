@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="test_suite" verbose="0">
+<suite name="Practice Suite">
     <test name="Book store tests">
         <classes>
-            <!--<class name="bookStore.BookStoreTest" />-->
+            <class name="bookStore.BookstoreTest"/>
         </classes>
     </test>
 </suite>
