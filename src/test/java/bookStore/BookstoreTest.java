@@ -13,7 +13,7 @@ import requests.RestClient;
 import java.util.stream.Collectors;
 
 public class BookstoreTest {
-    BookApi bookApi = new BookApi(new AuthenticateClient());
+    private BookApi bookApi = new BookApi(new AuthenticateClient());
 
     @DataProvider(name = "fetchBook-data")
     public Object[][] fetchBookIsbnData() {

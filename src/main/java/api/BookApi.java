@@ -8,11 +8,8 @@ import model.GetUserResultDto;
 import requests.AuthenticateClient;
 import requests.RestClient;
 
-import javax.inject.Inject;
-
 public class BookApi extends RestClient {
 
-    @Inject
     public BookApi(AuthenticateClient authenticateClient) {
         super(authenticateClient);
     }
@@ -43,9 +40,9 @@ public class BookApi extends RestClient {
 
     public GetUserResultDto fetchAllBooksByUserId(String userId) {
         return createGetRequest("/Account/v1/User/" + userId)
-                .then()
-                .statusCode(200)
-                .extract()
-                .as(GetUserResultDto.class);
+            .then()
+            .statusCode(200)
+            .extract()
+            .as(GetUserResultDto.class);
     }
 }
