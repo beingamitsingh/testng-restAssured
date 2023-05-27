@@ -2,6 +2,7 @@
 <suite name="Practice Suite">
     <test name="Book store tests">
         <classes>
+            <class name="AuthTest"/>
             <class name="bookStore.BookstoreTest"/>
         </classes>
     </test>
